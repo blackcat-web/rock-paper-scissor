@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Rakesh Deep">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <!-- styleSheet -->
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+  <!-- Full body of the Game -->
+  <div class="container">
+    <!-- score section and game title -->
+    <div class="head-sec">
+      <p class="game-names">rock <br> paper <br> Scissors</p>
+      <p class="score-bord">score<span class="score-num">0</span></p>
+    </div>
+    <!-- User Moves section -->
+    <div class="moves-sec">
+      <div class="moves moves-deco paper" onclick="addMoves(1)"><img src="./images/icon-paper.svg" alt="paper svg"
+          class="image-moves"></div>
+      <div class="moves moves-deco scissor" onclick="addMoves(2)"><img src="./images/icon-scissors.svg"
+          alt="Scissors svg" class="image-moves"></div>
+      <div class="moves moves-deco rock" onclick="addMoves(0)"><img src="./images/icon-rock.svg" alt="rock svg"
+          class="image-moves"></div>
+    </div>
+    <!-- showcase of winner -->
+    <div class=" win-show-move-box">
+      <p class="pick-msg"><span>you picked</span><span>the house picked</span></p>
+      <div class=" moves-deco" id="user-win"><img src="./images/icon-scissors.svg" alt="scissor svg" id="user-win-img">
+      </div>
+      <!-- continue play button and winner declaration -->
+      <div class="ask-box">
+        <p id="winMsg"></p><button type="button" class="btn" id="playBtn">play again</button>
+      </div>
+      <div class="moves-deco" id="cpu-win"><img src="./images/icon-paper.svg" alt="" id="cpu-win-img"></div>
+    </div>
+  </div>
+  <!-- Game rules section -->
+  <p class="rules" id="show-rules">Rules</p>
+  <div class="rule-image" id="rule-box">
+    <p>rules</p>
+      <img src="./images/icon-close.svg" class="close-rule" alt="close svg"
+        onclick="document.querySelector('.rule-image').style = 'display: none'" id="rule-image">
+        <img src="./images/image-rules.svg"
+      alt="rules image" class="rule-svg">
+  </div>
+</body>
+<!-- Functionality section coming from exteral JavaScript -->
+<script src="app.js"></script>
+
+</html>
